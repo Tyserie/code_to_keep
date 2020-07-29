@@ -8,7 +8,7 @@ class Card:
         self.rank = rank
 
     def __str__(self):
-        return f'{Card.rank_names[self.rank]} of {Card.suit_names[self.suit]}'
+        return f'{self.rank_names[self.rank]} of {self.suit_names[self.suit]}'
 
     def __lt__(self, other):
         t1 = self.suit, self.rank
