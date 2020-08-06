@@ -15,6 +15,10 @@ class Card:
         t2 = other.suit, other.rank
         return t1 < t2
 
+    def __gt__(self, other):
+        t1 = self.suit, self.rank
+        t2 = other.suit, other.rank
+        return t1 > t2
 
 class Deck:
 
@@ -32,10 +36,14 @@ class Deck:
         return '\n'.join(res)
 
 
-deck = Deck()
-print(deck)
+#deck = Deck()
+#print(deck)
 
-# Queen_of_heart = Card(2,12)
-# King_of_Spades = Card(3,13)
+Queen_of_heart = Card(2,12)
+King_of_Spades = Card(3,13)
 # print(Queen_of_heart)
 # print(King_of_Spades)
+#test = [Card(2,12), Card(3,13)]
+print(Queen_of_heart < King_of_Spades)
+print(Queen_of_heart > King_of_Spades)
+
