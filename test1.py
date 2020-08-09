@@ -38,9 +38,4 @@ print(f"{user1.login_account}")
 user1.reset_login_attempts()
 print(f"{user1.login_account}")
 
-#user2 = User("Stefan", "Tomko", "sku15894", "Kapu$tnica")
-#user3 = User("Danilo", "Telebakovic", "fkuingyd", "Klepa*89Kk")
-#user2.describe_user()
-#user2.greet_user()
-#user3.describe_user()
-#user3.greet_user()
+
