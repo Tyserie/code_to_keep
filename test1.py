@@ -1,5 +1,5 @@
 class User():
-    """Users class"""
+    """User class"""
 
     def __init__(self, name, surname, username, password):
         """User basic attributes"""
@@ -20,6 +20,11 @@ class User():
     def increment_login_attempts(self):
         """Increment login attempts"""
         self.login_account += 1
+        print(f"This is login attempt number {self.login_account} of "
+              f"user {user1.name} {user1.surname}!")
+        if self.login_account > 4:
+            print(f"User {user1.name} {user1.surname} you have exceeded allowed number "
+                  f"of login attempts and your account is now locked!")
 
     def reset_login_attempts(self):
         """Reset login attempt"""
@@ -27,14 +32,11 @@ class User():
             self.login_account = 0
 
 user1 = User("Tomas", "Sivak", "yubjklhu", "Start123")
-#user1.describe_user()
-#user1.greet_user()
 user1.increment_login_attempts()
 user1.increment_login_attempts()
 user1.increment_login_attempts()
 user1.increment_login_attempts()
 user1.increment_login_attempts()
-print(f"{user1.login_account}")
 user1.reset_login_attempts()
 print(f"{user1.login_account}")
 
