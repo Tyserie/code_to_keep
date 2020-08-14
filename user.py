@@ -48,8 +48,9 @@ class Privileges():
 
     def show_privileges(self):
         """Shows admin privileges"""
-        a = str(self.privileges)[0:]
-        return print(f"{a}")
+        a = self.privileges
+        for i in a:
+            print(i)
 
 
 user1 = Admin("Tomas", "Sivak", "yubjklhu", "Start123")
