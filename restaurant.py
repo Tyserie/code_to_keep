@@ -27,15 +27,16 @@ class IceCreamStand(Restaurant):
 
     def __init__(self, name, cuisine):
         super().__init__(name, cuisine)
-        self.flavor = ["vanila", "stracatella", "crenberies", "pistacia"]
+        self.flavor = 'vanila, stracatella, crenberies, pistacia'
 
     def display_flavor(self):
-        return print(f"{self.flavor}")
+        a = str(self.flavor)[0:]
+        return a
 
 
 iceCream = IceCreamStand("Zmrzlinarna", "zmrzlina")
-#print(f"Ice shop {iceCream.name} offers {iceCream.cuisine} in following flavors {iceCream.display_flavor()}")
-iceCream.display_flavor()
+print(f"Ice shop {iceCream.name} offers {iceCream.cuisine} in following flavors, {iceCream.display_flavor()}.")
+#iceCream.display_flavor()
 
 
 
