@@ -24,34 +24,18 @@ class Restaurant():
         self.number_served += increment
 
 class IceCreamStand(Restaurant):
+    """Ice cream class"""
 
     def __init__(self, name, cuisine):
+        """Initialise attributes of the parent class """
         super().__init__(name, cuisine)
         self.flavor = 'vanila, stracatella, crenberies, pistacia'
 
     def display_flavor(self):
+        """Prints the flavors"""
         a = str(self.flavor)[0:]
         return a
 
 
 iceCream = IceCreamStand("Zmrzlinarna", "zmrzlina")
 print(f"Ice shop {iceCream.name} offers {iceCream.cuisine} in following flavors, {iceCream.display_flavor()}.")
-#iceCream.display_flavor()
-
-
-
-
-
-
-#conan_restika = Restaurant("U Conana", "grillovane dobroty")
-#conan_restika.set_number_served(12)
-#conan_restika.increment_number_served(12)
-#print(f"{conan_restika.name} served {conan_restika.number_served} customers!")
-
-
-#moje_restika = Restaurant("Vaclavka", "treti cenova")
-#erikovo_restika = Restaurant("Mlsna Koza", "domaci kuchyne")
-#print(f"Hospoda {moje_restika.name} byla {moje_restika.cuisine}, ale dobra.")
-#moje_restika.describe_restaurant()
-#moje_restika.open_restaurant()
-#erikovo_restika.describe_restaurant()

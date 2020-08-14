@@ -37,7 +37,14 @@ class Admin(User):
     def __init__(self, name, surname, username, password):
         """Initialize attributes of the parent class."""
         super().__init__(name, surname, username, password)
-        self.privileges = 'can add post, can delete post, can ban user'
+        self.privileges = Privileges()
+
+
+class Privileges():
+    """Bla bla bla"""
+
+    def __init__(self, privileges=[]):
+        self.privileges = privileges
 
     def show_privileges(self):
         """Shows admin privileges"""
@@ -45,16 +52,15 @@ class Admin(User):
         return print(f"{a}")
 
 
-
 user1 = Admin("Tomas", "Sivak", "yubjklhu", "Start123")
-user1.show_privileges()
+user1_privileges = [
+    'can reset passwords',
+    'can moderate discussions',
+    'can suspend accounts',
+    ]
+user1.privileges.privileges = user1_privileges
+user1.privileges.show_privileges()
 
 
-#user1.increment_login_attempts()
-#user1.increment_login_attempts()
-#user1.increment_login_attempts()
-#user1.increment_login_attempts()
-#user1.reset_login_attempts()
-#print(f"{user1.login_account}")
 
 
