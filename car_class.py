@@ -1,4 +1,4 @@
-class Car():
+class Car:
     """A simple attempt to represent a car."""
     def __init__(self, make, model, year):
         self.make = make
@@ -22,7 +22,8 @@ class Car():
         def increment_odometer(self, miles):
             self.odometer_reading += miles
 
-class Battery():
+
+class Battery:
     """A simple attempt to model a battery for an electric car."""
 
     def __init__(self, battery_size=70):
@@ -44,6 +45,7 @@ class Battery():
         message += " miles on a full charge."
         print(message)
 
+
 class ElectricCar(Car):
     """Represent aspects of a car, specific to electric vehicles."""
 
@@ -61,9 +63,3 @@ my_tesla = ElectricCar('tesla', 'model s', 2016)
 print(my_tesla.get_descriptive_name())
 my_tesla.battery.describe_battery()
 my_tesla.battery.get_range()
-
-
-
-
-
-

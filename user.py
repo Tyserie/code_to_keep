@@ -31,13 +31,30 @@ class User():
         if self.login_account == 5:
             self.login_account = 0
 
-user1 = User("Tomas", "Sivak", "yubjklhu", "Start123")
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.reset_login_attempts()
-print(f"{user1.login_account}")
+class Admin(User):
+    """Bla bla bla"""
+
+    def __init__(self, name, surname, username, password):
+        """Initialize attributes of the parent class."""
+        super().__init__(name, surname, username, password)
+        self.privileges = 'can add post, can delete post, can ban user'
+
+    def show_privileges(self):
+        """Shows admin privileges"""
+        a = str(self.privileges)[0:]
+        return print(f"{a}")
+
+
+
+user1 = Admin("Tomas", "Sivak", "yubjklhu", "Start123")
+user1.show_privileges()
+
+
+#user1.increment_login_attempts()
+#user1.increment_login_attempts()
+#user1.increment_login_attempts()
+#user1.increment_login_attempts()
+#user1.reset_login_attempts()
+#print(f"{user1.login_account}")
 
 

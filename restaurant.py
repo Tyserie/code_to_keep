@@ -23,11 +23,29 @@ class Restaurant():
         """Increment number served"""
         self.number_served += increment
 
+class IceCreamStand(Restaurant):
 
-conan_restika = Restaurant("U Conana", "grillovane dobroty")
-conan_restika.set_number_served(12)
-conan_restika.increment_number_served(12)
-print(f"{conan_restika.name} served {conan_restika.number_served} customers!")
+    def __init__(self, name, cuisine):
+        super().__init__(name, cuisine)
+        self.flavor = ["vanila", "stracatella", "crenberies", "pistacia"]
+
+    def display_flavor(self):
+        return print(f"{self.flavor}")
+
+
+iceCream = IceCreamStand("Zmrzlinarna", "zmrzlina")
+#print(f"Ice shop {iceCream.name} offers {iceCream.cuisine} in following flavors {iceCream.display_flavor()}")
+iceCream.display_flavor()
+
+
+
+
+
+
+#conan_restika = Restaurant("U Conana", "grillovane dobroty")
+#conan_restika.set_number_served(12)
+#conan_restika.increment_number_served(12)
+#print(f"{conan_restika.name} served {conan_restika.number_served} customers!")
 
 
 #moje_restika = Restaurant("Vaclavka", "treti cenova")
